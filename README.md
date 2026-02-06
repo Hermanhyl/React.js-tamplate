@@ -88,6 +88,36 @@ All source files include **JSDoc comments** documenting every component, functio
 
 IDEs like VS Code will surface these docs as inline tooltips and autocomplete hints.
 
+## Claude Code
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's official CLI tool that brings Claude AI directly into your terminal. It can read, write, and edit files in your project, run commands, search your codebase, and help you build features, fix bugs, or refactor code — all through natural language conversation.
+
+### Why this template includes it
+
+This project ships with a `CLAUDE.md` file in the root. When you run Claude Code inside this directory, it automatically reads `CLAUDE.md` to understand the tech stack, project structure, design principles, component conventions, and available scripts. This means Claude can give accurate, context-aware assistance from the first prompt.
+
+### Setup
+
+1. **Install Claude Code** (requires Node.js 18+):
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+
+2. **Authenticate** — run `claude` for the first time and follow the login prompt to connect your Anthropic account.
+
+3. **Use it in this project** — navigate to the project root and start a session:
+   ```bash
+   cd my-project
+   claude
+   ```
+
+4. **Ask it anything** about the project, for example:
+   - *"Add a new Services page with a pricing grid"*
+   - *"Create a reusable Modal component in components/ui/"*
+   - *"Fix the mobile menu so it closes when a link is clicked"*
+
+Claude Code will read the `CLAUDE.md` context and work with the existing structure, conventions, and design principles defined in this template.
+
 ## Customization
 
 See `CLAUDE.md` for detailed project documentation and customization instructions.
