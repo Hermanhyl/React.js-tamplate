@@ -2,6 +2,8 @@
 
 A minimal, reusable starter template for building modern React applications.
 
+![Template Home Page](public/tamplate-homePage.png)
+
 ## Quick Start
 
 ```bash
