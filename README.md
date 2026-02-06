@@ -43,6 +43,37 @@ src/
 └── assets/          # Static images and icons
 ```
 
+## Pages
+
+| Page | Route | Description |
+|------|-------|-------------|
+| **HomePage** | `/` | Landing page composed of Hero banner, Features card grid, and Call-to-Action section |
+| **AboutPage** | `/about` | Placeholder about page ready to be customized |
+| **ContactPage** | `/contact` | Contact form with controlled inputs (no backend — add your own submission logic) |
+| **NotFoundPage** | `*` | 404 catch-all page for unmatched routes |
+
+## Layout & Components
+
+### Layout
+All pages share a common **Layout** wrapper that renders a persistent **Header** and **Footer** around the active route (via React Router's `<Outlet />`).
+
+- **Header** — Responsive navigation bar with a mobile hamburger menu and links to all pages
+- **Footer** — Site footer with organized link columns and branding
+
+### Section Components
+Pre-built content blocks used to compose pages:
+
+- **Hero** — Full-width banner with headline, subtitle, and CTA buttons
+- **Features** — Responsive card grid for highlighting key features
+- **CallToAction** — Standout banner section to drive user action
+
+### UI Primitives
+Reusable building blocks that section and page components are built from:
+
+- **Button** — Polymorphic component that renders as a `<button>`, React Router `<Link>`, or `<a>` tag depending on props
+- **Card** — Composable card with `CardHeader`, `CardTitle`, `CardDescription`, and `CardContent` sub-components
+- **Section** — Page section wrapper with an optional `SectionHeader`
+
 ## Customization
 
 See `CLAUDE.md` for detailed project documentation and customization instructions.
@@ -51,7 +82,7 @@ See `CLAUDE.md` for detailed project documentation and customization instruction
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start dev server on port 3000 |
+| `npm run dev` | Start dev server on port 4829 |
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build |
 | `npm run lint` | Run ESLint |
