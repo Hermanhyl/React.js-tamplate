@@ -25,6 +25,7 @@ npm run dev
 - 📐 **ESLint** — Code quality with React-specific rules
 - 📱 **Responsive Layout** — Mobile-first header with hamburger menu
 - 🧩 **Reusable Components** — Button, Card, Section primitives
+- 📝 **JSDoc Documented** — Every component, hook, utility, and handler is documented with JSDoc
 - 🤖 **Claude Code Ready** — `CLAUDE.md` with full project context
 
 ## Project Structure
@@ -73,6 +74,17 @@ Reusable building blocks that section and page components are built from:
 - **Button** — Polymorphic component that renders as a `<button>`, React Router `<Link>`, or `<a>` tag depending on props
 - **Card** — Composable card with `CardHeader`, `CardTitle`, `CardDescription`, and `CardContent` sub-components
 - **Section** — Page section wrapper with an optional `SectionHeader`
+
+## Documentation
+
+All source files include **JSDoc comments** documenting every component, function, hook, event handler, and data constant. This provides:
+
+- Descriptions of what each component renders and its role in the architecture
+- `@param` tags for all props with types and default values
+- `@returns` tags specifying the return type
+- Type annotations on data arrays and configuration objects
+
+IDEs like VS Code will surface these docs as inline tooltips and autocomplete hints.
 
 ## Customization
 
