@@ -1,5 +1,11 @@
 import Button from "../ui/Button";
 
+/**
+ * Call-to-action banner section component.
+ * Displays a full-width primary-colored banner with a heading, description,
+ * and a CTA button directing users to the contact page.
+ * @returns {JSX.Element} The call-to-action section.
+ */
 function CallToAction() {
   return (
     <section className="bg-primary py-20">

@@ -1,5 +1,11 @@
 import Button from "../ui/Button";
 
+/**
+ * Hero banner section component.
+ * Displays a full-width banner with a headline, subtitle, and primary/secondary
+ * CTA buttons. Used as the main landing area on the home page.
+ * @returns {JSX.Element} The hero section.
+ */
 function Hero() {
   return (
     <section className="bg-surface py-20 sm:py-28">

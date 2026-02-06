@@ -2,6 +2,12 @@ import { useState } from "react";
 import { Section, SectionHeader } from "../components/ui/Section";
 import Button from "../components/ui/Button";
 
+/**
+ * Contact page component.
+ * Renders a controlled contact form with name, email, and message fields.
+ * Form submission is a placeholder — connect to a backend or email service.
+ * @returns {JSX.Element} The contact page.
+ */
 function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -9,6 +15,10 @@ function ContactPage() {
     message: "",
   });
 
+  /**
+   * Updates form state when any input field changes.
+   * @param {React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>} e - The change event.
+   */
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -16,6 +26,11 @@ function ContactPage() {
     }));
   };
 
+  /**
+   * Handles form submission. Currently logs data and shows an alert.
+   * Replace with an API call or email service integration.
+   * @param {React.FormEvent<HTMLFormElement>} e - The submit event.
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Implement form submission (API call, email service, etc.)

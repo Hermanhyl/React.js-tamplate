@@ -7,6 +7,7 @@ import {
   CardContent,
 } from "../ui/Card";
 
+/** @type {{title: string, description: string, icon: string}[]} Feature data rendered as cards. */
 const features = [
   {
     title: "Feature One",
@@ -25,6 +26,12 @@ const features = [
   },
 ];
 
+/**
+ * Features grid section component.
+ * Renders a responsive grid of feature cards from the features data array.
+ * Each card displays an icon, title, description, and additional details.
+ * @returns {JSX.Element} The features section.
+ */
 function Features() {
   return (
     <Section id="features">

@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+/** @type {{to: string, label: string}[]} Navigation link definitions used in both desktop and mobile menus. */
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
 
+/**
+ * Responsive site header with navigation.
+ * Renders a sticky top bar with the brand logo, desktop nav links, and a
+ * hamburger-toggle mobile menu. Active links are highlighted via NavLink.
+ * @returns {JSX.Element} The site header.
+ */
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

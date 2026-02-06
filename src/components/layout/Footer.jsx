@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 
+/**
+ * Site footer component.
+ * Displays a multi-column grid with brand info, page links, resource links,
+ * and social/contact links. Includes a dynamic copyright year.
+ * @returns {JSX.Element} The site footer.
+ */
 function Footer() {
   const currentYear = new Date().getFullYear();
 

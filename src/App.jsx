@@ -5,6 +5,12 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+/**
+ * Root application component.
+ * Configures client-side routing with React Router. All routes are nested
+ * under the shared Layout component which provides the Header and Footer.
+ * @returns {JSX.Element} The routed application.
+ */
 function App() {
   return (
     <BrowserRouter>

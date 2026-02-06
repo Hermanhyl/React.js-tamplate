@@ -11,6 +11,14 @@ import { createContext, useContext, useState } from "react";
 
 const AppContext = createContext(null);
 
+/**
+ * Global state provider component.
+ * Wraps children with AppContext, providing theme and user state along
+ * with setter functions to update them.
+ * @param {Object} props
+ * @param {React.ReactNode} props.children - Child components that can access the context.
+ * @returns {JSX.Element} The context provider wrapper.
+ */
 export function AppProvider({ children }) {
   const [state, setState] = useState({
     // Add your global state here
@@ -27,6 +35,11 @@ export function AppProvider({ children }) {
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
 
+/**
+ * Custom hook to access the global AppContext.
+ * Must be used within an AppProvider. Throws an error if called outside of one.
+ * @returns {{theme: string, user: object|null, setTheme: Function, setUser: Function}} The context value.
+ */
 export function useAppContext() {
   const context = useContext(AppContext);
   if (!context) {

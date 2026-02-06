@@ -1,5 +1,11 @@
 import { Section, SectionHeader } from "../components/ui/Section";
 
+/**
+ * About page component.
+ * Placeholder page with a section header and descriptive text.
+ * Replace the content with project, team, or mission information.
+ * @returns {JSX.Element} The about page.
+ */
 function AboutPage() {
   return (
     <Section>

@@ -1,6 +1,12 @@
 import { Section } from "../components/ui/Section";
 import Button from "../components/ui/Button";
 
+/**
+ * 404 Not Found page component.
+ * Displayed as a catch-all for unmatched routes. Shows a 404 message
+ * and a button to navigate back to the home page.
+ * @returns {JSX.Element} The 404 page.
+ */
 function NotFoundPage() {
   return (
     <Section className="flex items-center justify-center">
