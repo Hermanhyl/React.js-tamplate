@@ -55,13 +55,13 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Links Column 2 */}
+          {/* Links Column 2 — Replace href values with your own URLs */}
           <div>
             <h3 className="mb-3 text-sm font-semibold text-text">Resources</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://example.com/docs"
                   className="text-sm text-text-muted transition-colors hover:text-primary"
                 >
                   Documentation
@@ -69,7 +69,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://example.com/support"
                   className="text-sm text-text-muted transition-colors hover:text-primary"
                 >
                   Support
@@ -77,7 +77,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://example.com/privacy"
                   className="text-sm text-text-muted transition-colors hover:text-primary"
                 >
                   Privacy Policy
@@ -86,13 +86,13 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Social / Contact Column */}
+          {/* Social / Contact Column — Replace href values with your own URLs */}
           <div>
             <h3 className="mb-3 text-sm font-semibold text-text">Connect</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-text-muted transition-colors hover:text-primary"
@@ -102,7 +102,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-text-muted transition-colors hover:text-primary"

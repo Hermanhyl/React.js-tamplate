@@ -3,6 +3,10 @@ node_modules/
 
 # Build output
 dist/
+.vite/
+
+# Test coverage
+coverage/
 
 # Environment variables
 .env

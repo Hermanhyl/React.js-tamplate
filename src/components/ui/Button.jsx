@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const variants = {
   primary: "bg-primary text-white hover:bg-primary-dark",
   secondary: "bg-secondary text-white hover:bg-secondary/90",
-  outline: "border border-primary text-primary hover:bg-primary hover:text-white",
+  outline:
+    "border border-primary text-primary hover:bg-primary hover:text-white",
   ghost: "text-text-muted hover:text-text hover:bg-surface",
 };
 

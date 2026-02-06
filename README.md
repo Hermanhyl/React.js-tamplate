@@ -24,9 +24,12 @@ npm run dev
 - ⚛️ **React 19** — Latest React with hooks
 - 🎨 **Tailwind CSS v4** — Utility-first CSS with CSS-based config
 - 🧭 **React Router v7** — Client-side routing with nested layouts
-- 📐 **ESLint** — Code quality with React-specific rules
+- 📐 **ESLint + Prettier** — Code quality with React, accessibility (jsx-a11y), and formatting rules
 - 📱 **Responsive Layout** — Mobile-first header with hamburger menu
-- 🧩 **Reusable Components** — Button, Card, Section primitives
+- 🧩 **Reusable Components** — Button, Card, Section, Spinner primitives
+- 🛡️ **Error Boundary** — Catches runtime errors with a user-friendly fallback UI
+- ✅ **Form Validation** — Contact form with per-field validation, error messages, and ARIA attributes
+- 🔍 **SEO Ready** — Open Graph, Twitter Card, and theme-color meta tags in index.html
 - 📝 **JSDoc Documented** — Every component, hook, utility, and handler is documented with JSDoc
 - 🤖 **Claude Code Ready** — `CLAUDE.md` with full project context
 
@@ -35,8 +38,8 @@ npm run dev
 ```
 src/
 ├── components/
-│   ├── layout/      # Header, Footer, Layout wrapper
-│   ├── ui/          # Reusable primitives (Button, Card, Section)
+│   ├── layout/      # Header, Footer, Layout wrapper, ErrorBoundary
+│   ├── ui/          # Reusable primitives (Button, Card, Section, Spinner)
 │   └── sections/    # Page content blocks (Hero, Features, CTA)
 ├── pages/           # Route-level page components
 ├── hooks/           # Custom React hooks
@@ -48,22 +51,25 @@ src/
 
 ## Pages
 
-| Page | Route | Description |
-|------|-------|-------------|
-| **HomePage** | `/` | Landing page composed of Hero banner, Features card grid, and Call-to-Action section |
-| **AboutPage** | `/about` | Placeholder about page ready to be customized |
-| **ContactPage** | `/contact` | Contact form with controlled inputs (no backend — add your own submission logic) |
-| **NotFoundPage** | `*` | 404 catch-all page for unmatched routes |
+| Page             | Route      | Description                                                                                      |
+| ---------------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| **HomePage**     | `/`        | Landing page composed of Hero banner, Features card grid, and Call-to-Action section             |
+| **AboutPage**    | `/about`   | Placeholder about page ready to be customized                                                    |
+| **ContactPage**  | `/contact` | Validated contact form with per-field errors and submission feedback (no backend — add your own) |
+| **NotFoundPage** | `*`        | 404 catch-all page for unmatched routes                                                          |
 
 ## Layout & Components
 
 ### Layout
+
 All pages share a common **Layout** wrapper that renders a persistent **Header** and **Footer** around the active route (via React Router's `<Outlet />`).
 
 - **Header** — Responsive navigation bar with a mobile hamburger menu and links to all pages
 - **Footer** — Site footer with organized link columns and branding
+- **ErrorBoundary** — Wraps the entire app; catches runtime errors and displays a fallback UI with a refresh button
 
 ### Section Components
+
 Pre-built content blocks used to compose pages:
 
 - **Hero** — Full-width banner with headline, subtitle, and CTA buttons
@@ -71,11 +77,13 @@ Pre-built content blocks used to compose pages:
 - **CallToAction** — Standout banner section to drive user action
 
 ### UI Primitives
+
 Reusable building blocks that section and page components are built from:
 
 - **Button** — Polymorphic component that renders as a `<button>`, React Router `<Link>`, or `<a>` tag depending on props
 - **Card** — Composable card with `CardHeader`, `CardTitle`, `CardDescription`, and `CardContent` sub-components
 - **Section** — Page section wrapper with an optional `SectionHeader`
+- **Spinner** — Animated loading spinner with `sm`, `md`, `lg` sizes and screen reader support
 
 ## Documentation
 
@@ -99,6 +107,7 @@ This project ships with a `CLAUDE.md` file in the root. When you run Claude Code
 ### Setup
 
 1. **Install Claude Code** (requires Node.js 18+):
+
    ```bash
    npm install -g @anthropic-ai/claude-code
    ```
@@ -106,15 +115,16 @@ This project ships with a `CLAUDE.md` file in the root. When you run Claude Code
 2. **Authenticate** — run `claude` for the first time and follow the login prompt to connect your Anthropic account.
 
 3. **Use it in this project** — navigate to the project root and start a session:
+
    ```bash
    cd my-project
    claude
    ```
 
 4. **Ask it anything** about the project, for example:
-   - *"Add a new Services page with a pricing grid"*
-   - *"Create a reusable Modal component in components/ui/"*
-   - *"Fix the mobile menu so it closes when a link is clicked"*
+   - _"Add a new Services page with a pricing grid"_
+   - _"Create a reusable Modal component in components/ui/"_
+   - _"Fix the mobile menu so it closes when a link is clicked"_
 
 Claude Code will read the `CLAUDE.md` context and work with the existing structure, conventions, and design principles defined in this template.
 
@@ -124,12 +134,15 @@ See `CLAUDE.md` for detailed project documentation and customization instruction
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start dev server on port 4829 |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| Command                | Description                      |
+| ---------------------- | -------------------------------- |
+| `npm run dev`          | Start dev server on port 4829    |
+| `npm run build`        | Build for production             |
+| `npm run preview`      | Preview production build         |
+| `npm run lint`         | Run ESLint                       |
+| `npm run lint:fix`     | Run ESLint with auto-fix         |
+| `npm run format`       | Format code with Prettier        |
+| `npm run format:check` | Check formatting without writing |
 
 ## License
 

@@ -55,6 +55,7 @@ function Header() {
           className="flex flex-col gap-1.5 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           <span
             className={`h-0.5 w-6 bg-text transition-transform ${mobileMenuOpen ? "translate-y-2 rotate-45" : ""}`}
@@ -70,7 +71,7 @@ function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="border-t border-border md:hidden">
+        <nav id="mobile-menu" className="border-t border-border md:hidden">
           <div className="container-wrapper flex flex-col gap-4 py-4">
             {navLinks.map((link) => (
               <NavLink

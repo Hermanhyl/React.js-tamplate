@@ -14,8 +14,8 @@ function Hero() {
           Your Main Headline Goes Here
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-text-muted">
-          A compelling subheadline that explains the value proposition or purpose
-          of this project. Replace this with your own content.
+          A compelling subheadline that explains the value proposition or
+          purpose of this project. Replace this with your own content.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button to="/about" size="lg">

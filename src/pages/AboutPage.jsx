@@ -19,8 +19,8 @@ function AboutPage() {
           about your project, your team, your story, or whatever is relevant.
         </p>
         <p>
-          You can structure this page however you like — add images, team
-          member cards, a timeline, or any other content that tells your story.
+          You can structure this page however you like — add images, team member
+          cards, a timeline, or any other content that tells your story.
         </p>
       </div>
     </Section>
